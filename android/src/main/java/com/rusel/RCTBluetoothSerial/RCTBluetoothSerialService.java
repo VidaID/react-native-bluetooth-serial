@@ -201,7 +201,7 @@ class RCTBluetoothSerialService {
 
             // Get a BluetoothSocket for a connection with the given BluetoothDevice
             try {
-                tmp = device.createRfcommSocketToServiceRecord(UUID_SPP);
+                tmp = device.createInsecureRfcommSocketToServiceRecord(UUID_SPP);
             } catch (Exception e) {
                 mModule.onError(e);
                 Log.e(TAG, "Socket create() failed", e);
